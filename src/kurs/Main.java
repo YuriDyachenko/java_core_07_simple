@@ -6,9 +6,8 @@ public class Main {
         Cat[] cats = createCats();
         printCats(cats);
 
-        Plate plate = new Plate(10);
-        plate.print();
-        plate.increase(20);
+        Plate plate = new Plate();
+        plate.increase(30);
         plate.print();
 
         feedCats(cats, plate);
