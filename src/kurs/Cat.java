@@ -12,12 +12,6 @@ public class Cat {
         full = false;
     }
 
-    //именно приватный, чтобы не могли установить сытость извне
-    //не покормив кота
-    private void setFull(boolean full) {
-        this.full = full;
-    }
-
     //кот говорит
     public void says(String msg) {
         System.out.printf("%s: %s\n", name, msg);
@@ -39,7 +33,7 @@ public class Cat {
             return;
         }
         plate.decrease(appetite);
-        setFull(true);
+        full = true;
         says(String.format("покушал %d", appetite));
     }
 
